@@ -168,6 +168,7 @@ class TestRedisSessionFactory(_TestRedisSessionFactoryCore):
         cookie_domain = "example.com"
         cookie_secure = True
         cookie_httponly = False
+        cookie_expires = None
         cookie_comment = None  # TODO: QA
         cookie_samesite = None  # TODO: QA
         secret = "test secret"
@@ -181,6 +182,7 @@ class TestRedisSessionFactory(_TestRedisSessionFactoryCore):
             cookie_domain=cookie_domain,
             cookie_secure=cookie_secure,
             cookie_httponly=cookie_httponly,
+            cookie_expires=cookie_expires,
             cookie_comment=cookie_comment,
             cookie_samesite=cookie_samesite,
             secret=secret,
@@ -204,6 +206,7 @@ class TestRedisSessionFactory(_TestRedisSessionFactoryCore):
             domain=cookie_domain,
             secure=cookie_secure,
             httponly=cookie_httponly,
+            expires=cookie_expires,
             comment=cookie_comment,
             samesite=cookie_samesite,
         )

@@ -592,6 +592,7 @@ class RedisSession(object):
         for as long as this session is active. Useful in situations where you
         want to change the expire time for a session dynamically.
         """
+        # TODO: affect the cookie max-age/expires
         self._session_state.timeout = timeout_seconds
 
     @persist
@@ -599,6 +600,7 @@ class RedisSession(object):
         """
         Updates the epoch used for python timeouts.
         """
+        # TODO: tests missing
         self._session_state.expires = expires_epoch
 
     @property
